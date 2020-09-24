@@ -11,10 +11,10 @@ This is the API repository of the UncSoftware Test. All the source code and requ
 - [ ] **Create a page to register a new customer in the database**
 
   - This page must have these input fields:
-    - - Name (_required_)
-    - - Email (_required_)
-    - - Phone (_required_)
-    - - Birth Date (_required_)
+    - Name (_required_)
+    - Email (_required_)
+    - Phone (_required_)
+    - Birth Date (_required_)
     - Postal Code
     - Street Name
     - Neighborhood
@@ -25,17 +25,46 @@ This is the API repository of the UncSoftware Test. All the source code and requ
   - After save a customer you should clear all input fields
   - A loading indicator must appear while the API is processing your request
 
-**If your project is a website**
+**:computer: If your project is a website**
 
 - [ ] Your website should work well in a cellphone, tablet and in the web (responsiveness)
 
-**If your project is a React Native app**
+**:vibration_mode: If your project is a React Native app**
 
 - [ ] Create a splash screen for your project (a splash screen is shown when the app is opening)
 
 ## :globe_with_meridians: How to consume the API
 
-This API is running at: http://unicodesoftware.ddns.net:3333
+- This API is running at: http://unicodesoftware.ddns.net:3333
+- You can also clone this project and run in your computer
+
+The file `insomnia.json` in the root of the project contain all the methods below. You can import this file in your Insomnia to test requests.
+
+**Methods**
+
+Route | Method | Explanation
+--- | --- | --- | ---
+/customers:id | GET | Get all customers or a single one if you put the id in the route (ex: `/customers/abc123` will return only one customer)
+/customers | PATCH | Edit a customer
+/customers | POST | Save a new customer
+/customers:id | DELETE | Delete a customer
+
+**Customer Data**
+
+Field | Type | Explanation
+--- | --- | ---
+id | uuid | Customer ID (uuid4)
+name | string | Customer name
+email | string | Customer email
+phone | string | Customer phone
+birthDate | string | Customer birth date
+postalCode | string | Customer postal code (CEP in Brazil)
+streetName | string | Customer street name
+neighborhood | string | Customer neighborhood (Bairro in Brazil)
+city | string | Customer city
+state | string | Customer State (SP, RJ, MS)
+createdAt | timestamp | Creation date
+updatedAt | timestamp | Last update date
 
 ## :-1: What you should not do
 
