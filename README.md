@@ -44,10 +44,10 @@ The file `insomnia.json` in the root of the project contain all the methods belo
 
 Route | Method | Explanation
 --- | --- | ---
-/customers:id | GET | Get all customers or a single one if you put the id in the route (ex: `/customers/abc123` will return only one customer)
-/customers | PATCH | Edit a customer
-/customers | POST | Save a new customer
-/customers:id | DELETE | Delete a customer
+/customer:id | GET | Get all customers or a single one if you put the id in the route (ex: `/customer/abc123` will return only one customer)
+/customer | PATCH | Edit a customer
+/customer | POST | Save a new customer
+/customer:id | DELETE | Delete a customer
 
 **Customer Data**
 
