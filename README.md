@@ -43,7 +43,7 @@ The file `insomnia.json` in the root of the project contain all the methods belo
 **Methods**
 
 Route | Method | Explanation
---- | --- | --- | ---
+--- | --- | ---
 /customers:id | GET | Get all customers or a single one if you put the id in the route (ex: `/customers/abc123` will return only one customer)
 /customers | PATCH | Edit a customer
 /customers | POST | Save a new customer
