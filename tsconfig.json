@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@controllers/*": ["./src/controllers/*"]
+      "@config/*": ["./src/config/*"],
+      "@controllers/*": ["./src/controllers/*"],
+      "@middlewares/*": ["./src/middlewares/*"],
+      "@validation/*": ["./src/validation/*"]
     }
   },
   "include": ["src/**/*"]
