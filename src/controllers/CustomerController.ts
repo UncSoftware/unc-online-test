@@ -21,8 +21,14 @@ export class CustomerController {
   async index (req: Request, res: Response) {
     try {
       const id: string = req.params.id
-      const customer = await knex.select('*').from('customer').where('id', id)
-      return res.status(200).json(customer)
+
+      if (id) {
+        const [customer] = await knex.select('*').from('customer').where('id', id)
+        return res.status(200).json(customer)
+      } else {
+        const customers = await knex.select('*').from('customer')
+        return res.status(200).json(customers)
+      }
     } catch (e) {
       return res.status(500).send()
     }
@@ -46,9 +52,8 @@ export class CustomerController {
 
   async update (req: Request, res: Response<Customer>) {
     try {
-      const now = new Date().getTime().toString()
       const customer: Customer = req.body
-      customer.updatedAt = now
+      customer.updatedAt = new Date().getTime().toString()
       await knex('customer').where('id', customer.id).update(customer)
       return res.status(200).json(customer)
     } catch (e) {
