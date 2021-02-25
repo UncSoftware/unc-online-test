@@ -4,7 +4,7 @@ import { Schema } from 'joi'
 export const ValidationMiddleware = (schema: Schema) => {
   return (req: Request, res: Response, next: NextFunction) => {
     const { error } = schema.validate(req, { abortEarly: false, allowUnknown: true })
-    const isValid = error == null
+    const isValid = !error
 
     if (isValid) {
       next()
