@@ -35,7 +35,7 @@ This is the API repository of the UncSoftware Test. All the source code and requ
 
 ## :globe_with_meridians: How to consume the API
 
-- This API is running at: http://unicodesoftware.ddns.net:3333
+- This API is running at: http://unicodesoftware-interno.ddns.net:3333
 - You can also clone this project and run in your computer
 
 The file `insomnia.json` in the root of the project contain all the methods below. You can import this file in your Insomnia to test requests.
