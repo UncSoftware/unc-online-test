@@ -1,12 +1,14 @@
+import path from 'path'
+
 export default {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3'
+      filename: path.resolve(__dirname, '..', 'dev.sqlite3')
     },
     migrations: {
       tableName: 'knex_migrations',
-      directory: './src/migrations',
+      directory: './migrations',
       extension: 'ts'
     },
     useNullAsDefault: true
@@ -26,7 +28,7 @@ export default {
     },
     migrations: {
       tableName: 'knex_migrations',
-      directory: './src/migrations',
+      directory: './migrations',
       extension: 'ts'
     }
   }

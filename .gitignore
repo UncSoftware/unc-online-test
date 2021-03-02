@@ -1,6 +1,11 @@
+# Folders
 node_modules
-dist
-*.env
 .vscode
+dist
+
+# .env Files
+.env
+
+# Database
 *.sqlite3
 *.db
