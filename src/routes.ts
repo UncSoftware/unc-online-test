@@ -3,10 +3,15 @@ import express from 'express'
 import { ValidationMiddleware } from '@middlewares/ValidationMiddleware'
 import { CustomerController } from '@controllers/CustomerController'
 import { CustomerValidation } from '@validation/CustomerValidation'
+import { DefaultController } from '@controllers/DefaultController'
 
 const router = express.Router()
+
+const defaultController = new DefaultController()
 const customerController = new CustomerController()
 const customerValidation = new CustomerValidation()
+
+router.get('/', defaultController.index)
 
 router.get(
   '/customer/:id?',
