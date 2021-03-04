@@ -33,6 +33,18 @@ This is the API repository of the UncSoftware Test. All the source code and requ
 
 - [ ] Create a splash screen for your project (a splash screen is shown when the app is opening)
 
+## :-1: What you should not do
+
+- [ ] Don't use UI kits such as Material UI, React Bootstrap
+- [ ] Don't use React templates
+
+## :star: Differentials
+
+- [ ] Setup Eslint and Prettier in your project
+- [ ] A beautiful design and great usability
+- [ ] Automated tests
+- [ ] TypeScript
+
 ## :globe_with_meridians: How to consume the API
 
 - This API is running at: http://unicodesoftware-interno.ddns.net:3333
@@ -85,18 +97,6 @@ yarn dev
 # or
 npm run dev
 ```
-
-## :-1: What you should not do
-
-- [ ] Don't use UI kits such as Material UI, React Bootstrap
-- [ ] Don't use React templates
-
-## :star: Differentials
-
-- [ ] Setup Eslint and Prettier in your project
-- [ ] A beautiful design and great usability
-- [ ] Automated tests
-- [ ] TypeScript
 
 ## :rocket: How to submit your project to us
 
