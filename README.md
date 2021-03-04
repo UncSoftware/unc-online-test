@@ -36,7 +36,7 @@ This is the API repository of the UncSoftware Test. All the source code and requ
 ## :globe_with_meridians: How to consume the API
 
 - This API is running at: http://unicodesoftware-interno.ddns.net:3333
-- You can also clone this project and run in your computer
+- You can also clone this project and run in your computer. There are instructions on how to do this in the section below.
 
 The file `insomnia.json` in the root of the project contain all the methods below. You can import this file in your Insomnia to test requests.
 
@@ -65,6 +65,26 @@ city | string | Customer city
 state | string | Customer State (SP, RJ, MS)
 createdAt | timestamp | Creation date
 updatedAt | timestamp | Last update date
+
+## :arrow_forward: How to Run the API locally
+
+1. [Download and install NodeJS](https://nodejs.org/en/) LTS version
+2. Follow the instructions below to run the API in **development mode**:
+
+```bash
+# Clone the project
+git clone https://github.com/UncSoftware/unc-online-test.git
+
+# Install dependencies
+yarn install
+# or
+npm i
+
+# Run the project
+yarn dev
+# or
+npm run dev
+```
 
 ## :-1: What you should not do
 
